@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {PageSettingsService} from "../service/PageSettings.service";
 import {Settings} from "../model/Settings.model"
 import { Observable} from "rxjs/Observable"
@@ -11,6 +11,7 @@ import { Angular2TokenService } from 'angular2-token';
   providers:[PageSettingsService]
 })
 export class HomePageComponent implements OnInit {
+  @ViewChild('test') el : ElementRef;
   public jsonData:any;
   baseURL = 'assets/data/test.json';
   
@@ -25,5 +26,8 @@ export class HomePageComponent implements OnInit {
   );
   
   }
-
+  
+  ngAfterViewInit() {
+    this.el.nativeElement.style.color=this.jsonData.accentColorSecondary;
+  }
 }

@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 import {PageSettingsService} from "./service/PageSettings.service";
 import { HttpClientModule }   from '@angular/common/http';
 import { Angular2TokenService } from 'angular2-token';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { Angular2TokenService } from 'angular2-token';
     BrowserAnimationsModule,
     MaterialModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2OrderModule
   ],
   providers: [PageSettingsService,Angular2TokenService ],
   bootstrap: [AppComponent]
