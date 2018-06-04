@@ -1,9 +1,9 @@
-<mat-grid-list cols="2" rowHeight="3:1">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-  <mat-grid-tile>5</mat-grid-tile>
-  <mat-grid-tile>6</mat-grid-tile>
-  
-</mat-grid-list>
+
+<mat-tab-group *ngIf="jsonData.enable_multiple_lists==true">
+  <mat-tab   *ngFor="let categor of jsonData.categories " label="{{categor.name}}"></mat-tab>
+</mat-tab-group>
+<ng-container *ngIf="jsonData">
+  <label for="" *ngIf="jsonData.name">
+    {{ jsonData.name }}
+  </label>
+</ng-container>

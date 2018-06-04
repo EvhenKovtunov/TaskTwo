@@ -7,7 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import {PageSettingsService} from "./service/PageSettings.service";
 import { HttpClientModule }   from '@angular/common/http';
-
+import { Angular2TokenService } from 'angular2-token';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { HttpClientModule }   from '@angular/common/http';
     HttpModule,
     HttpClientModule
   ],
-  providers: [PageSettingsService],
+  providers: [PageSettingsService,Angular2TokenService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
