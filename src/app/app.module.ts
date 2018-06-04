@@ -4,6 +4,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { MaterialModule } from "./material.module";
 import { HomePageComponent } from './home-page/home-page.component';
+import { HttpModule } from '@angular/http';
+import {PageSettingsService} from "./service/PageSettings.service";
+import { HttpClientModule }   from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +17,11 @@ import { HomePageComponent } from './home-page/home-page.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PageSettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
