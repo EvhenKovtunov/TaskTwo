@@ -40,11 +40,11 @@ export class HomePageComponent implements OnInit {
     { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
   ];
 
-  openDialog(title: any,videoUrl:any,long_description:any,videoTitle:any,gallery_images:Array<any>): void {
+  openDialog(title: any,long_description:any,videoTitle:any,videoUrl:any): void {
     let dialogRef = this.dialog.open(ModalPageComponent, {
-      width: '500px',
-      height: '400px',
-      data: { title,long_description,videoTitle,videoUrl,gallery_images}
+      width: '700px',
+      height: '600px',
+      data: { title,long_description,videoTitle,videoUrl}
     });
     console.log(videoUrl);
   }
