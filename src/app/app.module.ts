@@ -9,12 +9,15 @@ import {PageSettingsService} from "./service/PageSettings.service";
 import { HttpClientModule }   from '@angular/common/http';
 import { Angular2TokenService } from 'angular2-token';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { ModalPageComponent } from './modal-page/modal-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    ModalPageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +25,11 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     MaterialModule,
     HttpModule,
     HttpClientModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+    FormsModule
   ],
   providers: [PageSettingsService,Angular2TokenService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ModalPageComponent]
 })
 export class AppModule { }

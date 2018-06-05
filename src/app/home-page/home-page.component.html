@@ -1,10 +1,41 @@
-<ng-container *ngIf="jsonData">
-  <mat-tab-group *ngIf="jsonData.enable_multiple_lists " >
-    <mat-tab *ngFor="let categor of jsonData.categories | orderBy : 'positionNumber' " label="{{categor.name}}">
-     {{categor.items}}
-  </mat-tab>
-  </mat-tab-group>
-</ng-container>
+<mat-grid-list cols="4" rowHeight="100px" style="background-color:powderblue;">
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <h1> {{jsonData.name}}</h1>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="4" [rowspan]="1" [style.background]="lightblue">
+    <p> {{jsonData.description}}</p>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="3" [rowspan]="2" [style.background]="red">
+    <p> tile.text1</p>
+  </mat-grid-tile>
+</mat-grid-list>
 
-<label [style.color]="jsonData.accentColorSecondary">fgdfg</label>
+<mat-grid-list [style.color]="jsonData.accentColorSecondary" cols="1">
+
+  <ng-container *ngIf="jsonData">
+    <mat-tab-group *ngIf="jsonData.enable_multiple_lists ">
+      <mat-tab *ngFor="let categor of jsonData.categories | orderBy : 'positionNumber' " label="{{categor.name}}">
+
+        <!--<mat-tab-group  (click)="openDialog()">
+          <mat-tab  *ngFor="let item of jsonData.items | orderBy : 'position' " label="{{item.categories}} ">
+
+          </mat-tab>
+        </mat-tab-group>-->
+        <ng-container *ngFor="let item of jsonData.items | orderBy : 'position' ">
+        <ol (click)="openDialog(item.title,item.long_description,item.videoTitle,item.videoUrl)">
+         
+            <ul>{{item.id}}</ul>
+         
+        </ol>
+      </ng-container>
+      </mat-tab>
+    </mat-tab-group>
+  </ng-container>
+
+
+</mat-grid-list>
+
+
+
+
 
