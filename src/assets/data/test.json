@@ -24,7 +24,7 @@
       "name": "Category 3",
       "positionNumber": 3,
       "items": [109, 103, 108],
-      "active": false
+      "active": true
     },
     {
       "id": 301,
@@ -37,7 +37,7 @@
   "icon": {
     "name":"Home-Icon.png",
     "file": {
-      "url":"img/Home-Icon.png",
+      "url":"assets/img/Home-Icon.png",
       "thumb": {
         "url": "img/Home-Icon_thumb.png"
       },
@@ -56,7 +56,7 @@
       "gallery_images":[
         {
           "id":201,
-          "url":"img/items/87536378_thinkstockphotos-177521527-7ff9c.jpg",
+          "url":"assets/img/items/87536378_thinkstockphotos-177521527-7ff9c.jpg",
           "name":"87536378_thinkstockphotos-177521527-7ff9c.jpg",
           "media_type":"image"
         }
@@ -74,7 +74,7 @@
       "gallery_images":[
         {
           "id":202,
-          "url":"img/items/bigstock-Siren-Accidental-Emergency-Urg-174353470-52bff.jpg",
+          "url":"assets/img/items/bigstock-Siren-Accidental-Emergency-Urg-174353470-52bff.jpg",
           "name":"bigstock-Siren-Accidental-Emergency-Urg-174353470-52bff.jpg",
           "media_type":"image"
         }
@@ -92,7 +92,7 @@
       "gallery_images":[
         {
           "id":203,
-          "url":"img/items/skydeck-logo-1-6cead.png",
+          "url":"assets/img/items/skydeck-logo-1-6cead.png",
           "name":"skydeck-logo-1-6cead.png",
           "media_type":"image"
         }
@@ -110,7 +110,7 @@
       "gallery_images":[
         {
           "id":204,
-          "url":"img/items/03da727-4b966.png",
+          "url":"assets/img/items/03da727-4b966.png",
           "name":"03da727-4b966.png",
           "media_type":"image"
         }
@@ -128,19 +128,19 @@
       "gallery_images":[
         {
           "id":205,
-          "url":"img/items/2016-05-05-mojito-1024x682-1cf7b.jpg",
+          "url":"assets/img/items/2016-05-05-mojito-1024x682-1cf7b.jpg",
           "name":"2016-05-05-mojito-1024x682-1cf7b.jpg",
           "media_type":"image"
         },
         {
           "id":206,
-          "url":"img/items/cosmopolitan-550px-0a450.jpg",
+          "url":"assets/img/items/cosmopolitan-550px-0a450.jpg",
           "name":"cosmopolitan-550px-0a450.jpg",
           "media_type":"image"
         },
         {
           "id":207,
-          "url":"img/items/IMG_0085-c9fa8.JPG",
+          "url":"assets/img/items/IMG_0085-c9fa8.JPG",
           "name":"IMG_0085-c9fa8.JPG",
           "media_type":"image"
         }
@@ -158,19 +158,19 @@
       "gallery_images":[
         {
           "id":208,
-          "url":"img/items/bigstock--195212797-c427b.jpg",
+          "url":"assets/img/items/bigstock--195212797-c427b.jpg",
           "name":"bigstock--195212797-c427b.jpg",
           "media_type":"image"
         },
         {
           "id":209,
-          "url":"img/items/bigstock--149178743-d7344.jpg",
+          "url":"assets/img/items/bigstock--149178743-d7344.jpg",
           "name":"bigstock--149178743-d7344.jpg",
           "media_type":"image"
         },
         {
           "id":210,
-          "url":"img/items/bigstock-Postal-Service-Delivery-5221668-1fe86.jpg",
+          "url":"assets/img/items/bigstock-Postal-Service-Delivery-5221668-1fe86.jpg",
           "name":"bigstock-Postal-Service-Delivery-5221668-1fe86.jpg",
           "media_type":"image"
         }
@@ -188,7 +188,7 @@
       "gallery_images":[
         {
           "id":211,
-          "url":"img/items/Meat-c4039.jpg",
+          "url":"assets/img/items/Meat-c4039.jpg",
           "name":"Meat-c4039.jpg",
           "media_type":"image"
         }
@@ -206,7 +206,7 @@
       "gallery_images":[
         {
           "id":212,
-          "url":"img/items/meerkat-2-animal-profile-web620-c3610.jpg",
+          "url":"assets/img/items/meerkat-2-animal-profile-web620-c3610.jpg",
           "name":"meerkat-2-animal-profile-web620-c3610.jpg",
           "media_type":"image"
         }
@@ -224,7 +224,7 @@
       "gallery_images":[
         {
           "id":213,
-          "url":"img/items/album4597_34713_Sea-Life-Melbourne-Aquarium-things-to-do-in-whats-on-whats-009-cd480.jpg",
+          "url":"assets/img/items/album4597_34713_Sea-Life-Melbourne-Aquarium-things-to-do-in-whats-on-whats-009-cd480.jpg",
           "name":"album4597_34713_Sea-Life-Melbourne-Aquarium-things-to-do-in-whats-on-whats-009-cd480.jpg",
           "media_type":"image"
         }
@@ -242,13 +242,13 @@
       "gallery_images":[
         {
           "id":214,
-          "url":"img/items/20170809_154900-03e78.jpg",
+          "url":"assets/img/items/20170809_154900-03e78.jpg",
           "name":"20170809_154900-03e78.jpg",
           "media_type":"image"
         },
         {
           "id":215,
-          "url":"img/items/20170809_154923-8bc18.jpg",
+          "url":"assets/img/items/20170809_154923-8bc18.jpg",
           "name":"20170809_154923-8bc18.jpg",
           "media_type":"image"
         }
