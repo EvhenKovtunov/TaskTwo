@@ -31,10 +31,9 @@
             <div class="content" *ngFor="let item of jsonData.items | orderBy : 'position' ">
               <div class="items" *ngIf="categor.id==item.categories">
                 <mat-card (click)="openDialog(item)">
-                  <pre>Id:{{item.id}}</pre>
                   <pre>Title:{{item.title}}</pre>
                   <pre>Description:{{item.description}}</pre>
-                  <img class="imgContent" width="200px" height="200px" src="{{item.gallery_images[0].url}}" alt="img">
+                  <img class="img-fluid" src="{{item.gallery_images[0].url}}" alt="img">
                 </mat-card>
               </div>
             </div>

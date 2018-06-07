@@ -10,14 +10,14 @@
 
         <div class="slider">
             <ng-generate *ngIf="data.item.gallery_images == 1;else elseBlock">
-                <img src="{{data.item.gallery_images.url}}" alt="">
+                <img class="img-fluid"  src="{{data.item.gallery_images.url}}" alt="sliderImage">
 
             </ng-generate>
         </div>
         <ng-template #elseBlock>
             <mdb-carousel [isControls]="true" [animation]="'slide'">
                 <mdb-slide *ngFor="let image of data.item.gallery_images">
-                    <img src="{{image.url}}" alt="First slide">
+                    <img class="img-fluid" src="{{image.url}}" alt="First slide">
                 </mdb-slide>
 
             </mdb-carousel>
