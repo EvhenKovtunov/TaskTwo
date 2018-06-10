@@ -14,14 +14,19 @@ export class ModalPageComponent implements OnInit {
   ){ }
 
   ngOnInit() {
-    // console.log(this.data.id);
-    // console.log(this.data);
+    let counter=Object.keys(this.data.item.gallery_images).length;
+    console.log("counter",counter);
     console.log("data",this.data);
+
+    let shos=this.data.item.long_description;
+    for(let i=0;i<shos.length;i++)
+    {
+      if(shos[i]==0)console.log("ok");
+    }
   
   }
 
   onNoClick(): void {
-    
     this.dialogRef.close();
   }
 

@@ -3,7 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { MaterialModule } from "./material.module";
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomePageComponent} from './home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import {PageSettingsService} from "./service/PageSettings.service";
 import { HttpClientModule }   from '@angular/common/http';
@@ -23,7 +23,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
   declarations: [
     AppComponent,
     HomePageComponent,
-    ModalPageComponent
+    ModalPageComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import {VgBufferingModule} from 'videogular2/buffering';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule
+    
   ],
   providers: [PageSettingsService,Angular2TokenService ],
   bootstrap: [AppComponent,HomePageComponent],

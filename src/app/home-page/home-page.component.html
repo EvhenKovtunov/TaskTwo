@@ -2,12 +2,11 @@
  [ngClass]="{{jsonData.accentColorSecondary}}"
 -->
 <div *ngIf="jsonData" class="container-fluid" [ngStyle]="{'background': jsonData.accentColorSecondary}">
-  <ng-container>
 
     <div class="header">
       <div class="row">
         <div class="col-md-1">
-          <img class="logo" src="{{jsonData.icon.file.url}}" alt="Icon">
+          <img class="logo" src="{{jsonData.icon.file.url}}" alt="logo">
         </div>
         <div class="col-md-11">
           <h1>{{jsonData.name}}</h1>
@@ -30,10 +29,10 @@
           <mat-tab *ngIf="categor.active" label="{{categor.name}}">
             <div class="content" *ngFor="let item of jsonData.items | orderBy : 'position' ">
               <div class="items" *ngIf="categor.id==item.categories">
-                <mat-card (click)="openDialog(item)">
-                  <pre>Title:{{item.title}}</pre>
-                  <pre>Description:{{item.description}}</pre>
-                  <img class="img-fluid" src="{{item.gallery_images[0].url}}" alt="img">
+                <mat-card  (click)="openDialog(item)">
+                  <p> <strong>Title : </strong> {{item.title}}</p>
+                  <p> <strong>Description : </strong>{{item.description}}</p>
+                  <img class="img-fluid"  src="{{item.gallery_images[0].url}}" alt="img">
                 </mat-card>
               </div>
             </div>
@@ -53,7 +52,9 @@
       </ng-template>
 
     </div>
-
-
-  </ng-container>
+   
+  
 </div>
+
+
+  

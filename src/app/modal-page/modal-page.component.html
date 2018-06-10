@@ -6,28 +6,34 @@
         <p>
             <strong> Long Description :</strong> {{data.item.long_description}}</p>
 
-        <h3> {{data.item.videoUrl}}</h3>
 
         <div class="slider">
-            <ng-generate *ngIf="data.item.gallery_images == 1;else elseBlock">
-                <img class="img-fluid"  src="{{data.item.gallery_images.url}}" alt="sliderImage">
+            <div *ngIf="counter != 1;else elseBlock">
+                <mdb-carousel [isControls]="true" [animation]="'slide'">
+                    <mdb-slide *ngFor="let image of data.item.gallery_images">
+                        <img class="img-fluid" width="100%" src="{{image.url}}" alt="First slide">
+                    </mdb-slide>
 
-            </ng-generate>
+                </mdb-carousel>
+
+
+            </div>
+
         </div>
+        
         <ng-template #elseBlock>
-            <mdb-carousel [isControls]="true" [animation]="'slide'">
-                <mdb-slide *ngFor="let image of data.item.gallery_images">
-                    <img class="img-fluid" src="{{image.url}}" alt="First slide">
-                </mdb-slide>
 
-            </mdb-carousel>
+            <p>{{counter}}</p>
+            <img class="img-fluid" src="{{data.item.gallery_images.url}}" alt="sliderImage">
         </ng-template>
 
         <ng-generate *ngIf="data.item.videoUrl && data.item.videoTitle">
             <h1>Video Title: {{data.item.videoTitle}}</h1>
-            <iframe width="420" height="315" src="{{data.item.videoUrl}}">
-            </iframe>
+            <h1>videoUrl: {{data.item.videoUrl}}</h1>
+
+
         </ng-generate>
+
     </ng-generate>
 
 </div>
