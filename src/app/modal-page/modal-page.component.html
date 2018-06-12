@@ -3,35 +3,30 @@
     <ng-generate *ngIf="data">
 
         <h1>Title: {{data.item.title}}</h1>
-        <p>
-            <strong> Long Description :</strong> {{data.item.long_description}}</p>
-
+        <p><strong> Long Description :</strong> {{data.item.long_description}}</p>
 
         <div class="slider">
-            <div *ngIf="counter != 1;else elseBlock">
-                <mdb-carousel [isControls]="true" [animation]="'slide'">
-                    <mdb-slide *ngFor="let image of data.item.gallery_images">
-                        <img class="img-fluid" width="100%" src="{{image.url}}" alt="First slide">
-                    </mdb-slide>
 
-                </mdb-carousel>
-
-
+            <div *ngIf="counter==1;else elseBlock">
+                <img class="img-fluid" src="{{data.item.gallery_images[0].url}}" alt="First slide">
             </div>
 
+            <ng-template #elseBlock>
+                <mdb-carousel [isControls]="true" [animation]="'slide'">
+                    <mdb-slide *ngFor="let image of data.item.gallery_images">
+                        <img class="img-fluid" width="100%" src="{{image.url}}" alt="sliderImage">
+                    </mdb-slide>
+                </mdb-carousel>
+            </ng-template>
+
         </div>
-        
-        <ng-template #elseBlock>
-
-            <p>{{counter}}</p>
-            <img class="img-fluid" src="{{data.item.gallery_images.url}}" alt="sliderImage">
-        </ng-template>
-
-        <ng-generate *ngIf="data.item.videoUrl && data.item.videoTitle">
-            <h1>Video Title: {{data.item.videoTitle}}</h1>
-            <h1>videoUrl: {{data.item.videoUrl}}</h1>
 
 
+
+        <ng-generate *ngIf="data.item.videoTitle && data.item.videoUrl">
+           
+            <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="videoUrl"></iframe>
+           
         </ng-generate>
 
     </ng-generate>
