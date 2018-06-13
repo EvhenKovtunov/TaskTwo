@@ -18,7 +18,7 @@ export class ModalPageComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer,
     public dialogRef: MatDialogRef<HomePageComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {
+  ){
     this.updateVideoUrl();
    }
 

@@ -14,7 +14,7 @@
             <ng-template #elseBlock>
                 <mdb-carousel [isControls]="true" [animation]="'slide'">
                     <mdb-slide *ngFor="let image of data.item.gallery_images">
-                        <img class="img-fluid" width="100%" src="{{image.url}}" alt="sliderImage">
+                        <img class="img-fluid" src="{{image.url}}" alt="sliderImage">
                     </mdb-slide>
                 </mdb-carousel>
             </ng-template>
@@ -24,9 +24,9 @@
 
 
         <ng-generate *ngIf="data.item.videoTitle && data.item.videoUrl">
-           
-            <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="videoUrl"></iframe>
-           
+           <div class="iframe-wraper">
+            <iframe class="e2e-iframe-trusted-src"  align="bottom" [src]="videoUrl"></iframe>
+        </div>
         </ng-generate>
 
     </ng-generate>

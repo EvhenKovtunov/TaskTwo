@@ -4,9 +4,7 @@ h1{
 
 .img-fluid{
     width: 100%;
-    height: 50%;
-    position: relative;
-    background-size: cover;
+    height: 400px
 }
 .slider{
     width: 100%;
@@ -15,4 +13,16 @@ h1{
 .videoItem{
     height: 100%;
     width: 100%;
+}
+.slider{
+    padding-bottom: 40px;
+}
+
+.iframe-wraper{
+    text-align:center;  
+    width:100%;
+}
+iframe{
+    width: 100%;
+    height: 400px;
 }
