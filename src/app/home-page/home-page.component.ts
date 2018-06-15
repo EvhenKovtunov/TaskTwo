@@ -17,8 +17,8 @@ export class HomePageComponent implements OnInit {
 
   public jsonData: any;
   baseURL = 'assets/data/test.json';
-
   constructor(private tokenService: Angular2TokenService, public dialog: MatDialog) {
+   
   }
 
   ngOnInit() {

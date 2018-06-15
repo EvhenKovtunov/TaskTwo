@@ -3,6 +3,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { Angular2TokenService } from 'angular2-token';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { Pipe, PipeTransform } from '@angular/core';
+import linkifyStr from 'linkifyjs/string';
 @Component({
   selector: 'app-modal-page',
   templateUrl: './modal-page.component.html',
@@ -10,7 +12,6 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class ModalPageComponent implements OnInit {
 
-  
   videoUrl: SafeResourceUrl;
   dangerousVideoUrl: string;
   counter:number;
@@ -30,6 +31,7 @@ export class ModalPageComponent implements OnInit {
     this.dangerousVideoUrl = this.data.item.videoUrl;
     this.videoUrl =
         this.sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
+        
   }
   
 }

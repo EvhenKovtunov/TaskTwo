@@ -22,7 +22,6 @@
         </div>
       </div>
     </div>
-
     <div class="category">
       <mat-tab-group *ngIf="jsonData.enable_multiple_lists;else allCategories">
         <div *ngFor="let categor of jsonData.categories | orderBy : 'positionNumber' ">
@@ -32,7 +31,7 @@
                 <mat-card  (click)="openDialog(item)">
                   <p> <strong>Title : </strong> {{item.title}}</p>
                   <p> <strong>Description : </strong>{{item.description}}</p>
-                  <img class="img-content"  src="{{item.gallery_images[0].url}}" alt="img">
+                  <img class="imgContent" src="{{item.gallery_images[0].url}}" alt="img">
                 </mat-card>
               </div>
             </div>

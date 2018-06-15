@@ -12,7 +12,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 import { ModalPageComponent } from './modal-page/modal-page.component';
 import { FormsModule } from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import { LinkyModule } from 'angular-linky';
 
 import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
@@ -39,7 +39,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    LinkyModule
     
   ],
   providers: [PageSettingsService,Angular2TokenService ],
